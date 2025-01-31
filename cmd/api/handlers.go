@@ -72,7 +72,8 @@ func (app *application) getAgent(c echo.Context) error {
 	if err != nil {
 		// Log and return a bad request error if the ID is not a valid integer
 		app.logger.Errorf("Invalid agent ID: %v", err)
-		return c.JSON(http.StatusBadRequest, utils.BadRequestResponse(err))
+		customErr := errors.New("invalid agent ID")
+		return c.JSON(http.StatusBadRequest, utils.BadRequestResponse(customErr))
 	}
 
 	// Retrieve the agent details from the database

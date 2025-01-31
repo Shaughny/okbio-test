@@ -7,12 +7,12 @@ services:
     ports:
       - "${PORT}:${PORT}"
     volumes:
-      - ./database.db:/root/database.db  # Mount SQLite file for persistence
+      - ./database.sqlite:/app/database.sqlite  # Mount SQLite file for persistence
     env_file:
       - .env
     environment:
       - PORT=${PORT}
-      - DATABASE_URL=${DATABASE_URL}
+      - DATABASE_URL=/app/database.sqlite
       - API_URL=http://ip-api.com/json/
       - RATE_LIMIT=${RATE_LIMIT}
     restart: unless-stopped

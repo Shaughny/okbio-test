@@ -124,3 +124,8 @@ docker compose up -d --build
 docker compose down
 ```
 
+## Removing binaries and database
+```sh
+make clean
+```
+

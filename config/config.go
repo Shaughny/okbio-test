@@ -14,14 +14,16 @@ var DB *sql.DB
 // InitializeDB initializes SQLite connection and creates tables if needed
 func InitializeDB() *sql.DB {
 	dbPath := os.Getenv("DATABASE_URL")
-
+	if dbPath == "" {
+		dbPath = "database.sqlite" // ✅ Default for local use
+	}
 	var err error
-	DB, err = sql.Open("sqlite3", dbPath)
+	DB, err = sql.Open("sqlite3", "database.sqlite")
 	if err != nil {
 		log.Fatalf("Failed to connect to SQLite: %v", err)
 	}
 
-	fmt.Println("Connected to SQLite database successfully at", dbPath)
+	fmt.Println("Connected to SQLite database successfully at", "database.sqlite")
 	createTables()
 	return DB
 }

@@ -1,6 +1,6 @@
 # Variables
 APP_NAME = okbio-api
-DB_FILE = database.db
+DB_FILE = database.sqlite
 
 # Go commands
 help:
@@ -17,6 +17,7 @@ build:
 	go build -o $(APP_NAME) ./cmd/api/
 
 run: build
+	touch $(DB_FILE)
 	./$(APP_NAME)
 
 clean:
@@ -32,6 +33,8 @@ lint:
 	golangci-lint run
 
 docker-run:
+	# remove binary if exists
+	rm -f $(APP_NAME)
 	docker compose up --build -d
 
 docker-stop:
