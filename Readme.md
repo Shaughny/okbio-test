@@ -69,11 +69,10 @@ curl -X GET "http://localhost:8080/agents/1"
 ```
 
 ---
-## ** Running the API**
-### ** Create a .env file**
+## **Running the API**
+### **Create a .env file**
 ```sh
 PORT=8080
-DB_PATH=database.db
 RATE_LIMIT=100
 ```
 ## install dependencies
