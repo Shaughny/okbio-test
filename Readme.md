@@ -31,15 +31,7 @@ curl -X POST "http://localhost:8080/agents" \
      -d '{"ip_address": "8.8.8.8"}'
 
 ```
-#### **Response:**
-```json
-{
-  "id": 1,
-  "ip_address": "8.8.8.8",
-  "asn": "15169",
-  "isp": "Google LLC"
-}
-```
+
 
 ### 🔹 **Example: Get a List of Agents**
 #### **Request:**
