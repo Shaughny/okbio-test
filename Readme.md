@@ -85,7 +85,7 @@ go mod tidy
 ### **🔹 Using Docker**
 1. **Clone the repository:**
 ```sh
-git clone https://github.com/Shaughny/okbio-test.git
+git clone https://github.com/Shaughny/obkio-test.git
 ```
 
 2. **Start with docker:**
@@ -105,7 +105,7 @@ make docker-stop
 ### **🔹 Using Local Go Installation**
 1. **Clone the repository:**
 ```sh
-git clone https://github.com/Shaughny/okbio-test.git
+git clone https://github.com/Shaughny/obkio-test.git
 ```
 
 2. **Make sure go is installed on your machine.**

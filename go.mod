@@ -1,4 +1,4 @@
-module github.com/Shaughny/okbio-test
+module github.com/Shaughny/obkio-test
 
 go 1.23.5
 

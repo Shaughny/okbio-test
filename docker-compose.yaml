@@ -3,7 +3,7 @@ version: '3.8'
 services:
   app:
     build: .
-    container_name: okbio-api
+    container_name: obkio-api
     ports:
       - "${PORT}:${PORT}"
     volumes:

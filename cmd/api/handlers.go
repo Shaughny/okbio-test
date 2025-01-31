@@ -2,8 +2,8 @@ package main
 
 import (
 	"errors"
-	"github.com/Shaughny/okbio-test/internal/service"
-	"github.com/Shaughny/okbio-test/internal/utils"
+	"github.com/Shaughny/obkio-test/internal/service"
+	"github.com/Shaughny/obkio-test/internal/utils"
 	"github.com/labstack/echo/v4"
 	"net/http"
 	"strconv"

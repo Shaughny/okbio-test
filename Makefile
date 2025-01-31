@@ -1,5 +1,5 @@
 # Variables
-APP_NAME = okbio-api
+APP_NAME = obkio-api
 DB_FILE = database.sqlite
 
 # Go commands

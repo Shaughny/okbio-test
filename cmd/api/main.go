@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/Shaughny/okbio-test/config"
-	"github.com/Shaughny/okbio-test/internal/service"
-	"github.com/Shaughny/okbio-test/internal/utils"
+	"github.com/Shaughny/obkio-test/config"
+	"github.com/Shaughny/obkio-test/internal/service"
+	"github.com/Shaughny/obkio-test/internal/utils"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"golang.org/x/time/rate"
