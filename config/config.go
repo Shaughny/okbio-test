@@ -18,22 +18,23 @@ func InitializeDB() *sql.DB {
 		dbPath = "database.sqlite" // ✅ Default for local use
 	}
 	var err error
-	DB, err = sql.Open("sqlite3", "database.sqlite")
+	DB, err = sql.Open("sqlite3", dbPath)
 	if err != nil {
 		log.Fatalf("Failed to connect to SQLite: %v", err)
 	}
 
-	fmt.Println("Connected to SQLite database successfully at", "database.sqlite")
+	fmt.Println("Connected to SQLite database successfully at", dbPath)
 	createTables()
 	return DB
 }
 
+// createTables creates the necessary tables in the database
 func createTables() {
 	createTableSQL := `
 	CREATE TABLE IF NOT EXISTS agents (
 		id INTEGER PRIMARY KEY AUTOINCREMENT,
-		ip_address TEXT UNIQUE NOT NULL,
-		asn INTEGER,
+		ip_address varchar(15) UNIQUE NOT NULL,
+		asn TEXT,
 		isp TEXT,
 		last_updated DATETIME DEFAULT CURRENT_TIMESTAMP
 	);`

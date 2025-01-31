@@ -73,6 +73,7 @@ curl -X GET "http://localhost:8080/agents/1"
 ### **Create a .env file**
 ```sh
 PORT=8080
+DATABASE_URL=database.sqlite
 RATE_LIMIT=100
 ```
 ## install dependencies
@@ -108,11 +109,17 @@ git clone https://github.com/Shaughny/okbio-test.git
 ```
 
 2. **Make sure go is installed on your machine.**
+
+
 3. **Run the API:**
+- With make:
 ```sh
 make run
 ```
-
+- Without make:
+```sh
+go run ./cmd/api/
+```
 ---
 ### **🔹 Running Tests**
 ```sh

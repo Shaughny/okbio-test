@@ -7,6 +7,7 @@ type ErrorResponse struct {
 	Details map[string]string `json:"details,omitempty"`
 }
 
+// ValidationErrorResponse returns a validation error response based on the given error.
 func ValidationErrorResponse(err error) ErrorResponse {
 	errorsMap := make(map[string]string)
 
@@ -34,6 +35,7 @@ func ValidationErrorResponse(err error) ErrorResponse {
 	}
 }
 
+// ServerErrorResponse returns a server error response.
 func ServerErrorResponse(err error) ErrorResponse {
 	return ErrorResponse{
 		Error:   "Internal Server Error",
@@ -41,17 +43,22 @@ func ServerErrorResponse(err error) ErrorResponse {
 	}
 }
 
+// BadRequestResponse returns a bad request error response.
 func BadRequestResponse(err error) ErrorResponse {
 	return ErrorResponse{
 		Error:   "Bad Request",
 		Details: map[string]string{"error": err.Error()},
 	}
 }
+
+// GenericErrorResponse returns a generic error response.
 func GenericErrorResponse() ErrorResponse {
 	return ErrorResponse{
 		Error: "Internal Server Error",
 	}
 }
+
+// NotFoundResponse returns a not found error response.
 func NotFoundResponse(err error) ErrorResponse {
 	return ErrorResponse{
 		Error:   "Not Found",

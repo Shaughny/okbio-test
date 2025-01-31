@@ -21,7 +21,7 @@ run: build
 	./$(APP_NAME)
 
 clean:
-	rm -f $(APP_NAME) $(DB_FILE)
+	rm -r $(APP_NAME) $(DB_FILE)
 
 test:
 	go test ./... -v
