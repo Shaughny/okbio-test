@@ -27,3 +27,5 @@ go.work.sum
 #database
 .db
 database.db
+
+.idea
