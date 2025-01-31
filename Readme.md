@@ -5,7 +5,7 @@ The **Agents Monitoring API** is a Go-based REST API that allows agents to send 
 
 ---
 
-## ** Features**
+## **Features**
 - Accepts IP address submissions from agents.  
 - Retrieves and stores **Autonomous System Number (ASN)** and **Internet Service Provider (ISP)** details.  
 - Provides endpoints to **list all agents** and **fetch details of a specific agent**.   
